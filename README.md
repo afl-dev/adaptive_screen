@@ -1,6 +1,6 @@
-# ra
+# Adaptive screen
 
-A new Flutter project.
+![](adaptive_gif.gif)
 
 ## Getting Started
 

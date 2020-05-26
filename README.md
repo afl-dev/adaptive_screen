@@ -1,6 +1,6 @@
 # Adaptive screen
 
-![](adaptive_gif.gif)
+![](adaptive.gif)
 
 ## Getting Started
 

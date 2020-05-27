@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:ra/helpers/autosize_fonts.dart';
 
 class NavBarButton extends StatelessWidget {
   final height;
   final width;
-  final fnt17;
 
-  const NavBarButton({Key key, this.height, this.width, this.fnt17})
+  const NavBarButton({Key key, this.height, this.width})
       : super(key: key);
 
   @override
@@ -59,7 +59,7 @@ class NavBarButton extends StatelessWidget {
                 child: Text(
                   'Вакансии',
                   style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: fnt17),
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: AutoSizeFonts.fnt17x672(height)),
                 ),
               ),
               Spacer(),

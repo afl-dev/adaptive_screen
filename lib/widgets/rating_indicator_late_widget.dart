@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ra/helpers/autosize_fonts.dart';
 
 class RatIndLate extends StatelessWidget {
   final height;
   final width;
-  final fnt10;
-  final fnt17;
-
-  const RatIndLate({Key key, this.height, this.width, this.fnt10, this.fnt17})
+  const RatIndLate({Key key, this.height, this.width})
       : super(key: key);
 
   @override
@@ -19,10 +17,10 @@ class RatIndLate extends StatelessWidget {
           children: <Widget>[
             Text(
               'Ваш рейтинг',
-              style: TextStyle(fontSize: fnt10),
+              style: TextStyle(fontSize: AutoSizeFonts.fnt10x672(height)),
             ),
             Text('324',
-                style: TextStyle(fontSize: fnt17, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: AutoSizeFonts.fnt17x672(height), fontWeight: FontWeight.bold)),
           ],
         ),
         Spacer(),
@@ -31,14 +29,14 @@ class RatIndLate extends StatelessWidget {
           child: Icon(
             Icons.arrow_upward,
             color: Colors.green,
-            size: fnt17,
+            size: AutoSizeFonts.fnt17x672(height),
           ),
         ),
         // Spacer(),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Без опозданий 10 дней x2', style: TextStyle(fontSize: fnt10)),
+            Text('Без опозданий 10 дней x2', style: TextStyle(fontSize: AutoSizeFonts.fnt10x672(height))),
             Container(
               height: height * 0.004,
               width: width * 0.55,

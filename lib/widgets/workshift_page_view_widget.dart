@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ra/helpers/autosize_fonts.dart';
 import 'package:ra/repository/dummy_data.dart';
 
 import 'divider_vert_widget.dart';
@@ -7,22 +8,12 @@ class WorkShiftPageView extends StatefulWidget {
   final pageIndexNotifier;
   final int length;
   final double height;
-  final double fnt8;
-  final double fnt10;
-  final double fnt12;
-  final double fnt14;
-  final double fnt22;
 
   const WorkShiftPageView({
     Key key,
     @required this.pageIndexNotifier,
     @required this.length,
-    @required this.height,
-    @required this.fnt8,
-    @required this.fnt10,
-    @required this.fnt12,
-    @required this.fnt14,
-    @required this.fnt22,
+    @required this.height
   }) : super(key: key);
 
   @override
@@ -64,7 +55,7 @@ class _WorkShiftPageViewState extends State<WorkShiftPageView> {
                       child: Container(
                         child: Text(
                           "ЧТ, 16.04.2020",
-                          style: TextStyle(fontSize: widget.fnt8),
+                          style: TextStyle(fontSize: AutoSizeFonts.fnt8x672(widget.height)),
                         ),
                       ),
                       flex: 7,
@@ -99,11 +90,11 @@ class _WorkShiftPageViewState extends State<WorkShiftPageView> {
                               Spacer(),
                               Text(
                                 '${list[index].startTime}',
-                                style: TextStyle(fontSize: widget.fnt12),
+                                style: TextStyle(fontSize: AutoSizeFonts.fnt12x672(widget.height)),
                               ),
                               Text(
                                 '${list[index].endTime}',
-                                style: TextStyle(fontSize: widget.fnt12),
+                                style: TextStyle(fontSize: AutoSizeFonts.fnt12x672(widget.height)),
                               ),
                               Spacer(),
                             ],
@@ -122,7 +113,7 @@ class _WorkShiftPageViewState extends State<WorkShiftPageView> {
                               child: Text(
                                 '${list[index].title}',
                                 style: TextStyle(
-                                    fontSize: widget.fnt14,
+                                    fontSize: AutoSizeFonts.fnt14x672(widget.height),
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
@@ -132,7 +123,7 @@ class _WorkShiftPageViewState extends State<WorkShiftPageView> {
                               child: Text(
                                 'Адрес',
                                 style: TextStyle(
-                                    fontSize: widget.fnt10, color: Colors.grey),
+                                    fontSize: AutoSizeFonts.fnt10x672(widget.height), color: Colors.grey),
                               ),
                             ),
                             Spacer(),
@@ -141,7 +132,7 @@ class _WorkShiftPageViewState extends State<WorkShiftPageView> {
                               child: Text(
                                 '${list[index].adress}',
                                 style: TextStyle(
-                                  fontSize: widget.fnt10,
+                                  fontSize: AutoSizeFonts.fnt10x672(widget.height),
                                 ),
                               ),
                             ),
@@ -162,7 +153,7 @@ class _WorkShiftPageViewState extends State<WorkShiftPageView> {
                                     '${list[index].income}',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: widget.fnt14),
+                                        fontSize: AutoSizeFonts.fnt14x672(widget.height)),
                                   )),
                             ],
                           )),
@@ -202,7 +193,7 @@ class _WorkShiftPageViewState extends State<WorkShiftPageView> {
                                       child: Icon(
                                         Icons.star,
                                         color: Colors.green,
-                                        size: widget.fnt22,
+                                        size: AutoSizeFonts.fnt22x672(widget.height),
                                       ),
                                     ),
                                   ],

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ra/helpers/autosize_fonts.dart';
 
 class FeedbackButton extends StatelessWidget {
   final height;
-  final fnt10;
-  final fnt11;
 
-  const FeedbackButton({Key key, this.height, this.fnt10, this.fnt11})
+  const FeedbackButton({Key key, this.height})
       : super(key: key);
 
   @override
@@ -30,7 +29,7 @@ class FeedbackButton extends StatelessWidget {
                 child: Center(
                     child: Text(
                   "1",
-                  style: TextStyle(fontSize: fnt10),
+                  style: TextStyle(fontSize: AutoSizeFonts.fnt10x672(height)),
                 )),
               ),
               Spacer(flex: 4),
@@ -39,7 +38,7 @@ class FeedbackButton extends StatelessWidget {
                 child: Text(
                   'Отклики',
                   style:
-                      TextStyle(fontSize: fnt11, fontWeight: FontWeight.bold),
+                      TextStyle(fontSize: AutoSizeFonts.fnt11x672(height), fontWeight: FontWeight.bold),
                 ),
               ),
             ],

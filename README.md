@@ -1,5 +1,4 @@
-# Adaptive screen
-
+# Adaptive screen Flutter SDK (DART)
 ![](adaptive.gif)
 
 ## Getting Started

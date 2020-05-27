@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ra/helpers/autosize_fonts.dart';
 
 class AccountButton extends StatelessWidget {
-  final fnt11;
-  final fnt20;
+  final height;
 
-  const AccountButton({Key key, this.fnt11, this.fnt20}) : super(key: key);
+  const AccountButton({Key key, this.height}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +18,15 @@ class AccountButton extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Spacer(),
-            Text(
-              '3450 ₽',
-              style: TextStyle(fontSize: fnt20, color: Colors.green),
-            ),
+            Text('3450 ₽',
+                style: TextStyle(
+                    fontSize: AutoSizeFonts.fnt20x672(height),
+                    color: Colors.green)),
             Spacer(),
-            Text(
-              'Мой счет',
-              style: TextStyle(fontSize: fnt11, fontWeight: FontWeight.bold),
-            ),
+            Text('Мой счет',
+                style: TextStyle(
+                    fontSize: AutoSizeFonts.fnt11x672(height),
+                    fontWeight: FontWeight.bold)),
             Spacer(),
           ],
         ),

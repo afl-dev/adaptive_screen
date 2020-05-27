@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ra/helpers/autosize_fonts.dart';
 import 'package:ra/widgets/account_button_widget.dart';
 import 'package:ra/widgets/appbar_widget.dart';
 import 'package:ra/widgets/feedback_button_widget.dart';
@@ -34,17 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    final double fnt8 = (height / 84).ceilToDouble(); // base font 8
-    final double fnt10 = (height / 67.20).ceilToDouble(); // base font 10
-    final double fnt11 = (height / 61.10).ceilToDouble(); // base font 11
-    final double fnt12 = (height / 56.00).ceilToDouble(); // base font 12
-    final double fnt14 = (height / 48.00).ceilToDouble(); // base font 14
-    final double fnt15 = (height / 44.80).ceilToDouble(); // base font 15
-    final double fnt17 = (height / 39.55).ceilToDouble(); // base font 17
-    final double fnt20 = (height / 33.60).ceilToDouble(); // base font 20
-    final double fnt22 = (height / 30.55).ceilToDouble(); // base font 22
+
     return Scaffold(
-      appBar: AppBarWidget(height: height, fnt10: fnt10, fnt17: fnt17),
+      appBar: AppBarWidget(height: height),
       body: Center(
         child: SizedBox(
           width: width * 0.9,
@@ -59,7 +52,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Text(
                       'Предыдущие смены',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: fnt17),
+                          fontWeight: FontWeight.bold,
+                          fontSize: AutoSizeFonts.fnt17x672(height)),
                     ),
                   )),
               Spacer(),
@@ -69,41 +63,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: SizedBox(
                     width: double.infinity,
                     child: WorkShiftPageView(
-                      pageIndexNotifier: pageIndexNotifier,
-                      length: length,
-                      height: height,
-                      fnt8: fnt8,
-                      fnt10: fnt10,
-                      fnt12: fnt12,
-                      fnt14: fnt14,
-                      fnt22: fnt22,
-                    )),
+                        pageIndexNotifier: pageIndexNotifier,
+                        length: length,
+                        height: height)),
               ),
               PageViewIndicatorSample(
                   length: length, pageIndexNotifier: pageIndexNotifier),
               Divider(height: 1),
               Spacer(),
               Expanded(
-                  flex: 2,
-                  child: RatIndLate(
-                    height: height,
-                    width: width,
-                    fnt10: fnt10,
-                    fnt17: fnt17,
-                  )),
+                  flex: 2, child: RatIndLate(height: height, width: width)),
               Spacer(),
               Expanded(
                 flex: 4,
                 child: Row(
                   children: <Widget>[
-                    Expanded(
-                        flex: 8,
-                        child: AccountButton(fnt11: fnt11, fnt20: fnt20)),
+                    Expanded(flex: 8, child: AccountButton(height: height)),
                     Spacer(),
                     Expanded(
                       flex: 8,
-                      child: FeedbackButton(
-                          height: height, fnt10: fnt10, fnt11: fnt11),
+                      child: FeedbackButton(height: height),
                     ),
                   ],
                 ),
@@ -113,8 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar:
-          NavBarButton(height: height, width: width, fnt17: fnt17),
+      bottomNavigationBar: NavBarButton(height: height, width: width),
     );
   }
 }

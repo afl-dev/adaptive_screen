@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ra/helpers/autosize_fonts.dart';
 
 class AppBarWidget extends AppBar {
   final height;
-  final fnt10;
-  final fnt17;
 
-  AppBarWidget({this.height, this.fnt10, this.fnt17})
+  AppBarWidget({this.height})
       : super(
           title: Row(
             children: <Widget>[
@@ -30,11 +29,11 @@ class AppBarWidget extends AppBar {
                   children: <Widget>[
                     Text(
                       'Николай Шевчук',
-                      style: TextStyle(fontSize: fnt17),
+                      style: TextStyle(fontSize: AutoSizeFonts.fnt17x672(height)),
                     ),
                     Text(
                       'Рейтинг в чем бы он не отоброжался',
-                      style: TextStyle(fontSize: fnt10),
+                      style: TextStyle(fontSize: AutoSizeFonts.fnt10x672(height)),
                     ),
                   ],
                 ),

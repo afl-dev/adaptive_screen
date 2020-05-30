@@ -21,7 +21,7 @@ class AccountButton extends StatelessWidget {
             Text('3450 ₽',
                 style: TextStyle(
                     fontSize: AutoSizeFonts.fnt20x672(height),
-                    color: Colors.green)),
+                    color: Theme.of(context).primaryColor)),
             Spacer(),
             Text('Мой счет',
                 style: TextStyle(

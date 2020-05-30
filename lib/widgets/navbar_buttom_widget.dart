@@ -5,8 +5,7 @@ class NavBarButton extends StatelessWidget {
   final height;
   final width;
 
-  const NavBarButton({Key key, this.height, this.width})
-      : super(key: key);
+  const NavBarButton({Key key, this.height, this.width}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +28,10 @@ class NavBarButton extends StatelessWidget {
           ),
         ],
       ),
-      //color: Colors.transparent,
       height: height * 0.1,
       child: Material(
         type: MaterialType.transparency,
         elevation: 6.0,
-        //color: Colors.transparent,
         child: InkWell(
           onTap: () {},
           borderRadius: BorderRadius.only(
@@ -49,18 +46,17 @@ class NavBarButton extends StatelessWidget {
               Flexible(
                   flex: 3,
                   child: Container(
-                    color: Colors.green,
+                    color: Theme.of(context).primaryColor,
                     height: 2,
                     width: (width / 6).ceilToDouble(),
                   )),
               Spacer(flex: 2),
               Expanded(
                 flex: 3,
-                child: Text(
-                  'Вакансии',
-                  style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: AutoSizeFonts.fnt17x672(height)),
-                ),
+                child: Text('Вакансии',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: AutoSizeFonts.fnt17x672(height))),
               ),
               Spacer(),
             ],

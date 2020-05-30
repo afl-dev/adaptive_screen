@@ -3,20 +3,20 @@ import 'package:ra/helpers/autosize_fonts.dart';
 
 class AppBarWidget extends AppBar {
   final height;
+  final context;
 
-  AppBarWidget({this.height})
+  AppBarWidget({this.context, this.height})
       : super(
           title: Row(
             children: <Widget>[
               Spacer(),
               Flexible(
                 child: Container(
-                  child: CircleAvatar(
-                    backgroundImage: ExactAssetImage('assets/images/pp.jpg'),
-                  ),
-                  height: (height / 14.94).ceilToDouble(),
-                  width: (height / 14.94).ceilToDouble(),
-                ),
+                    child: CircleAvatar(
+                      backgroundImage: ExactAssetImage('assets/images/pp.jpg'),
+                    ),
+                    height: (height / 14.94).ceilToDouble(),
+                    width: (height / 14.94).ceilToDouble()),
                 flex: 3,
                 fit: FlexFit.loose,
               ),
@@ -27,13 +27,13 @@ class AppBarWidget extends AppBar {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      'Николай Шевчук',
-                      style: TextStyle(fontSize: AutoSizeFonts.fnt17x672(height)),
-                    ),
+                    Text('Николай Шевчук',
+                        style: TextStyle(
+                            fontSize: AutoSizeFonts.fnt17x672(height))),
                     Text(
                       'Рейтинг в чем бы он не отоброжался',
-                      style: TextStyle(fontSize: AutoSizeFonts.fnt10x672(height)),
+                      style:
+                          TextStyle(fontSize: AutoSizeFonts.fnt10x672(height)),
                     ),
                   ],
                 ),
@@ -49,6 +49,6 @@ class AppBarWidget extends AppBar {
                   onPressed: () {}),
             ),
           ],
-          backgroundColor: Colors.green,
+          backgroundColor: Theme.of(context).primaryColor,
         );
 }

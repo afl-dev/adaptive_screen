@@ -28,7 +28,7 @@ class RatIndLate extends StatelessWidget {
           alignment: Alignment.topCenter,
           child: Icon(
             Icons.arrow_upward,
-            color: Colors.green,
+            color: Theme.of(context).primaryColor,
             size: AutoSizeFonts.fnt17x672(height),
           ),
         ),
@@ -53,7 +53,7 @@ class RatIndLate extends StatelessWidget {
                     widthFactor: 0.5,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.green,
+                        color: Theme.of(context).primaryColor,
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),

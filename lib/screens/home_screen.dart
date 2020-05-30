@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: AppBarWidget(height: height),
+      appBar: AppBarWidget(height: height, context: context),
       body: Center(
         child: SizedBox(
           width: width * 0.9,
@@ -80,10 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: <Widget>[
                     Expanded(flex: 8, child: AccountButton(height: height)),
                     Spacer(),
-                    Expanded(
-                      flex: 8,
-                      child: FeedbackButton(height: height),
-                    ),
+                    Expanded(flex: 8, child: FeedbackButton(height: height)),
                   ],
                 ),
               ),

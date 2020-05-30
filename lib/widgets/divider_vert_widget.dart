@@ -8,12 +8,6 @@ class DividerVert extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
-        //flex: 1,
-        // fit: FlexFit.tight,
-        child: Container(
-      color: Colors.green,
-      height: height * 0.07,
-      width: 2,
-    ));
+        child: Container(color: Colors.green, height: height * 0.07, width: 2));
   }
 }
